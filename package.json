@@ -9,8 +9,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "cd server && npm run start",
     "build": "cd client && npm install && npm run build",
-    "dev": "cd server && npm run dev",
-    "prepare": "husky install"
+    "dev": "cd server && npm run dev"
   },
   "engines": {
     "node": "16.x"
@@ -24,7 +23,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "7.0.4",
     "lerna": "^5.1.4",
     "nx": "^14.3.6"
   }
