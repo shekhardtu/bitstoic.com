@@ -12,7 +12,7 @@ const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
 const { helmet, rateLimiter } = require('./middlewares');
 const routes = require('./routes/v1');
-const routesViews = require('./views/routes');
+// const routesViews = require('./views/routes');
 
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
@@ -24,9 +24,13 @@ if (configs.get('env') !== 'test') {
   app.use(morgan.errorHandler);
 }
 
-// set the template engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+// // set the template engine
+// app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, './views'));
+
+// Have Node serve the files for our built React app
+
+app.use(express.static(path.resolve(__dirname, '../../client/build')));
 
 // set path for static assets
 app.use(express.static(path.join(__dirname, './public')));
@@ -59,13 +63,18 @@ passport.use('jwt', jwtStrategy);
 
 // limit repeated failed requests to auth endpoints
 if (configs.get('env') === 'production') {
-  app.use('/v1/auth', rateLimiter.authLimiter);
+  app.use('/api/v1/auth', rateLimiter.authLimiter);
 }
 
 // v1 api routes
-app.use('/v1', routes);
+app.use('/api/v1', routes);
 
-app.use('/', routesViews);
+// app.use('/', routesViews);
+
+// All other GET requests not handled before will return our React app
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../client/build', 'index.html'));
+});
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
