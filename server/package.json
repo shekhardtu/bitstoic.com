@@ -8,8 +8,8 @@
   "author": "Hari Shekhar <shekhardtu@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.14.0",
-    "npm": ">=8.4.0"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "postinstall": "npm run tailwind:css",
