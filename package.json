@@ -5,9 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "cd client && npm install && cd ../server && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && npm run start",
-    "build": "npx lerna bootstrap && npx lerna run build",
+    "build": "npx lerna run build",
     "clean": "lerna clean && rm -rf node_modules",
     "buildx": "cd client && npm install && npm run build",
     "dev": "cd server && npm run dev"
