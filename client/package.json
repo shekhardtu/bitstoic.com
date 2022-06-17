@@ -1,0 +1,39 @@
+{
+  "name": "fitbydiet.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
+    "build": "next build && next export"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "7.0.0",
+    "axios": "0.27.2",
+    "classnames": "2.3.1",
+    "dayjs": "^1.11.2",
+    "next": "12.1.6",
+    "next-i18next": "11.0.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-hook-form": "7.31.3",
+    "react-icons": "4.3.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "18.0.9",
+    "@types/validator": "^13.7.2",
+    "autoprefixer": "10.4.7",
+    "caniuse-api": "3.0.0",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-plugin-react-hooks": "4.5.0",
+    "postcss": "8.4.14",
+    "sass": "1.52.0",
+    "tailwindcss": "3.0.24",
+    "typescript": "4.7.2"
+  }
+}

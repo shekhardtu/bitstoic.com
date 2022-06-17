@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/*
+src/public/.DS_Store
+.DS_Store
+
+# yarn error logs
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Code coverage
+coverage
+.DS_Store

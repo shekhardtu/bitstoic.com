@@ -1,0 +1,24 @@
+{
+  "name": "bitstoic.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap",
+    "dev:pp": "npx lerna run dev:pp --scope server"
+  },
+  "dependencies": {
+    "client": "*",
+    "http-proxy-middleware": "^2.0.6",
+    "server": "*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^5.1.4",
+    "nx": "^14.3.6"
+  }
+}

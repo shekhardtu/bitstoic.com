@@ -1,0 +1,22 @@
+<div class="mx-auto w-full shadow-lg">
+  <div class="grid grid-cols-2 gap-4">
+    <div class="w-full flex justify-start my-5 items-center ml-8">
+      <a class="flex rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900" href="/"
+        >LOGO</a
+      >
+    </div>
+    <div class="flex w-full justify-end my-5">
+      <nav class="flex space-x-4 items-center mr-8">
+        <% menuItems.map(([title, url]) => {%>
+        <a
+          href="/<%= url %>"
+          id="<%= url %>"
+          class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 <% if(menuId==url) {%> bg-blue-100 <%}%>"
+        >
+          <%= title %></a
+        >
+        <% }) %>
+      </nav>
+    </div>
+  </div>
+</div>

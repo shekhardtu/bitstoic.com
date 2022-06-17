@@ -1,0 +1,46 @@
+{
+  "NODE_ENV": "production",
+  "env": "production",
+
+  "app": {
+    "name": "Hagen",
+    "secret": "thisIsMyAppSecret"
+  },
+  "phone": {
+    "sms": {
+      "accountSid": "ACb418d3c7923141a81d58e61d9b64fa82",
+      "authToken": "e5b8efd81531c1165ed6db27cbfa4bd6",
+      "from": "+17406406706"
+    }
+  },
+  "email": {
+    "smtp": {
+      "host": "smtp.ethereal.email",
+      "port": 587,
+      "auth": {
+        "user": "stefan.bradtke82@ethereal.email",
+        "pass": "t3NNMkfY3Z8gc567bH"
+      }
+    },
+    "from": "shekhardtu@gmail.com"
+  },
+  "jwt": {
+    "secret": "thisisasamplesecret",
+    "accessExpirationMinutes": 30,
+    "refreshExpirationDays": 30,
+    "resetPasswordExpirationMinutes": 10,
+    "verifyEmailExpirationMinutes": 10
+  },
+  "port": 3000,
+  "mongoose": {
+    "url": "mongodb+srv://hari:hari1234@c1.evuwb.mongodb.net/auth?retryWrites=true&w=majority",
+    "options": {
+      "useNewUrlParser": true,
+      "useUnifiedTopology": true
+    }
+  },
+  "crypto": {
+    "salt": 24,
+    "randomBytes": 16
+  }
+}

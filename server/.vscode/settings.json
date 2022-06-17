@@ -1,0 +1,24 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": false,
+  "files.exclude": {
+    "node_modules": true,
+    ".husky": true,
+    "tests": true
+  },
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "ejs",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "erb",
+    "cfml",
+    "HTML (Eex)"
+  ]
+}
