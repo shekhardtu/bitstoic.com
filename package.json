@@ -8,24 +8,15 @@
     "install": "cd client && npm install && cd ../server && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && npm run start",
-    "build": "npx lerna run build",
-    "clean": "lerna clean && rm -rf node_modules",
-    "buildx": "cd client && npm install && npm run build",
+    "clean": "rm -rf node_modules && rm -rf /**/node_modules",
+    "build": "cd client && npm run build",
     "dev": "cd server && npm run dev"
   },
   "engines": {
     "node": "16.x"
   },
-  "dependencies": {
-    "client": "*",
-    "http-proxy-middleware": "^2.0.6",
-    "server": "*"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "lerna": "^5.1.4",
-    "nx": "^14.3.6"
-  }
+  "devDependencies": {}
 }
